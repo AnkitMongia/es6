@@ -1,6 +1,8 @@
 import emojipedia from "./emojipedia";
 
 
+var numbers = [3, 56, 2, 48, 5];
+
 //Map -Create a new array by doing something with each item in an array.
 
 //Filter - Create a new array by keeping the items that return true.
@@ -13,4 +15,20 @@ import emojipedia from "./emojipedia";
 
 console.log(emojipedia.map((emoji)=>{
     return emoji.meaning.substring(0,100);
+}));
+
+console.log(numbers.filter((num)=>{
+    return num <10;
+}));
+
+console.log(numbers.reduce((acc, num)=>{
+    return acc + num;
+}));
+
+console.log(numbers.find((num)=>{
+    return num>20;
+}));
+
+console.log(numbers.findIndex((num)=>{
+    return num <10;
 }));
